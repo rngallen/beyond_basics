@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
 
     'users.apps.UsersConfig',
+    'actors.apps.ActorsConfig',
+    'movies.apps.MoviesConfig',
+    
 ]
 
 MIDDLEWARE = [

@@ -19,3 +19,8 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+admin.site.site_header = "Movies Administration"
+admin.site.site_title = "Bongo Movie"
+admin.site.index_title = "Manage Bongo Movies"
+# admin.site.site_url = "http://facebook.com"
