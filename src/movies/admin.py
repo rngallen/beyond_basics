@@ -13,8 +13,7 @@ class FilmAdmin(admin.ModelAdmin):
     list_display = ("title", "created", "length")
 
     def render_change_form(self, request, context, *args, **kwargs):
-        context['adminform'].form.fields['actors'].queryset = Actor.objects.filter(
-            is_star=True)
+        context["adminform"].form.fields['actors'].queryset = Actor.objects.filter(is_star=True)
         return super().render_change_form(request, context, *args, **kwargs)
 
 
@@ -23,6 +22,5 @@ class CommercialAdmin(admin.ModelAdmin):
     list_display = ("title", "created", "company")
 
     def render_change_form(self, request, context, *args, **kwargs):
-        context["adminform"].form.fields['actors'].queryset=Actor.objects.filter(is_star=False)
+        context["adminform"].form.fields['actors'].queryset = Actor.objects.filter(is_star=False)
         return super().render_change_form(request, context, *args, **kwargs)
-

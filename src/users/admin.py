@@ -5,6 +5,8 @@ from django.contrib.auth.admin import UserAdmin
 
 # Register your models here.
 
+
+@admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     models = CustomUser
     add_form = CustomUserCreationForm
@@ -14,15 +16,10 @@ class CustomUserAdmin(UserAdmin):
         (
             "User Roles",
             {
-                "fields":(
+                "fields": (
                     "is_producer",
                     "is_director",
                 )
             }
         )
     )
-
-admin.site.register(CustomUser, CustomUserAdmin)
-
-    
-
