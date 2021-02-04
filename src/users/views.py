@@ -10,6 +10,7 @@ class MyPasswordChangeView(PasswordChangeView):
     template_name = 'users/password_change.html'
     success_url = reverse_lazy('users:password_reset_done')
 
+
 class MyPasswordResetDoneView(PasswordResetDoneView):
     template_name = 'users/password_reset_done.html'
     success_url = reverse_lazy('index')

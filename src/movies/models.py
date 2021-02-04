@@ -6,7 +6,8 @@ from django.utils.translation import ugettext_lazy as _
 
 class Movie(models.Model):
     title = models.CharField(_("title"), max_length=60)
-    actors = models.ManyToManyField("actors.Actor", verbose_name=_("actors"), blank=True)
+    actors = models.ManyToManyField(
+        "actors.Actor", verbose_name=_("actors"), blank=True)
     created = models.DateField(_("created on"), auto_now=True)
 
     class Meta:

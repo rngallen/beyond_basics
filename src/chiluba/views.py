@@ -29,7 +29,8 @@ def login_view(request):
         else:
             return render(request, 'main/login.html', context)
     return render(request, 'main/login.html', context)
-    
+
+
 def logout_view(request):
-        logout(request)
-        return redirect('index')
+    logout(request)
+    return redirect('index')
